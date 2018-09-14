@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:dubbo="http://code.alibabatech.com/schema/dubbo"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+							http://www.springframework.org/schema/beans/spring-beans.xsd
+							http://code.alibabatech.com/schema/dubbo
+							http://code.alibabatech.com/schema/dubbo/dubbo.xsd">
+    <!-- 服务名 -->
+    <dubbo:application name="hello-service-app"/>
+    <!-- 注册中心地址 -->
+    <dubbo:registry address="zookeeper://127.0.0.1:2181" group="wangquan.pro"/>
+    <!-- 本服务的暴露协议和端口号 -->
+    <dubbo:protocol name="dubbo" port="20880"/>
+    <!-- 不使用注解来注册服务，就不会产生aop导致无法识别的问题了 -->
+    <!--     <dubbo:annotation package="com.git.service.impl"/>  -->
+    <dubbo:service interface="com.git.service.DemoService" ref="demoServiceImpl"/>
+</beans>
