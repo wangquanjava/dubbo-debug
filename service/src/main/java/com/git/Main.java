@@ -1,7 +1,6 @@
-/**
+package com.git; /**
  * 
  */
-package com.git.main;
 
 import java.io.IOException;
 
@@ -14,7 +13,7 @@ public class Main {
 		ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext(new String[] { 
 				"spring/applicationContext.xml",
 				"spring/applicationContext-mybatis.xml",
-				"spring/applicationContext-dubbo.xml"
+				"spring/applicationContext-provider.xml"
 				});
 		context.start();
 		System.out.println("按任意键退出");

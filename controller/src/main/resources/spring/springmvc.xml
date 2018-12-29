@@ -65,12 +65,4 @@
 	
 	<!-- 文件上传部分 -->
 	<bean id="multipartResolver" class="org.springframework.web.multipart.commons.CommonsMultipartResolver"></bean>
-	
-	<!-- dubbo相关 -->
-	<!-- 服务名 -->
-	<dubbo:application name="hello-controller-app" />
-	<!-- 注册中心地址 -->
-	<dubbo:registry address="zookeeper://127.0.0.1:2181" group="wangquan.pro"/>
-	<!-- 扫描注解 -->
-    <dubbo:annotation package="com.git.controller"/> 
 </beans>

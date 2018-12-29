@@ -8,11 +8,12 @@
 							http://code.alibabatech.com/schema/dubbo/dubbo.xsd">
     <!-- 服务名 -->
     <dubbo:application name="hello-service-app"/>
+
     <!-- 注册中心地址 -->
-    <dubbo:registry address="zookeeper://127.0.0.1:2181" group="wangquan.pro"/>
-    <!-- 本服务的暴露协议和端口号 -->
-    <dubbo:protocol name="dubbo" port="20880"/>
+    <dubbo:registry address="zookeeper://127.0.0.1:2181"/>
+
+    <dubbo:protocol port="20880" name="dubbo" />
+
     <!-- 不使用注解来注册服务，就不会产生aop导致无法识别的问题了 -->
-    <!--     <dubbo:annotation package="com.git.service.impl"/>  -->
     <dubbo:service interface="com.git.service.DemoService" ref="demoServiceImpl"/>
 </beans>
