@@ -8,9 +8,6 @@
 							http://code.alibabatech.com/schema/dubbo/dubbo.xsd">
 
 
-    <!-- 非注解情况下获得spring对象 -->
-    <bean class="com.git.utils.SpringContextUtils"/>
-
     <dubbo:application name="business-app"/>
 
     <dubbo:registry address="zookeeper://127.0.0.1:2181" />

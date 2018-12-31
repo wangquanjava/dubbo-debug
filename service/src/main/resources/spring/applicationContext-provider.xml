@@ -12,7 +12,7 @@
     <!-- 注册中心地址 -->
     <dubbo:registry address="zookeeper://127.0.0.1:2181"/>
 
-    <dubbo:protocol port="20880" name="dubbo" />
+    <dubbo:protocol port="10000" name="dubbo" />
 
     <!-- 不使用注解来注册服务，就不会产生aop导致无法识别的问题了 -->
     <dubbo:service interface="com.git.service.DemoService" ref="demoServiceImpl"/>
